@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  // === Variablen ===
+  --background-color: #3d3f45;
+  --border-color: #a62c21;
+  --underline-color: #1f4e8c;
+  --btn-color: #3d3f45;
+}
+
+section {
+  padding: 4em 0rem;
+}
+
+// === Header Styling ===
+.main-header {
+  width: 100%;
+  height: 60px;
+  background-color: var(--background-color);
+  .header-container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #header-logo {
+      height: 50px;
+    }
+    nav {
+      width: 30%;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        li {
+          list-style: none;
+          margin-left: 2rem;
+          a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            padding: 0.2rem 0rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// === Underline Animation ===
+.underline:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--underline-color);
+  transform: scale(0);
+  transition: all 200ms ease-in-out;
+}
+
+.underline:hover::before,
+.underline:focus::before {
+  transform: scale(1);
+}
+
+// === Banner Image ===
+.banner-image {
+  background-image: url(../img/hintergrund.jpg);
+  width: 100%;
+  height: 400px;
+}
+
+// === Newsletter Styling ===
+.newsletter-section {
+  width: 100%;
+  height: 80px;
+  background-color: var(--background-color);
+  .newsletter-container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .newsletter-text {
+      font-size: 1.8rem;
+      color: white;
+    }
+    form {
+      width: 26%;
+      display: flex;
+      justify-content: space-between;
+      input {
+        padding: 0.5rem 1.2rem;
+        font-size: 1.4rem;
+        margin: 0rem 2rem;
+        border: 2px solid var(--border-color);
+      }
+      button {
+        position: relative;
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--border-color);
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// === Home Leistung Section ===
+.home-leistung-section {
+  width: 100%;
+  height: auto;
+  .home-leistung-container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo-animation {
+      width: 160px;
+      height: 160px;
+      background-color: var(--background-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      img {
+        width: 100px;
+        height: 100px;
+        animation: spinner 4s infinite linear;
+      }
+    }
+    .title {
+      margin-top: 3rem;
+      font-size: 2.8rem;
+    }
+    .wdms-text {
+      margin: 1.6rem 0rem;
+      width: 80%;
+      font-size: 2.4rem;
+      text-align: center;
+    }
+    .leistung-box-container {
+      width: 80%;
+      height: auto;
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 60px;
+      align-items: center;
+      justify-items: center;
+      .leistung-box {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--background-color);
+        color: white;
+        h1 {
+          font-size: 2.4rem;
+          margin-top: 3rem;
+        }
+        .inhalt-text {
+          width: 440px;
+          height: 240px;
+          display: flex;
+          align-items: center;
+          font-size: 1.8rem;
+          text-align: center;
+          border: 2px solid white;
+          margin: 2rem;
+          padding: 2rem;
+        }
+        .btn {
+          position: absolute;
+          padding: 0.3rem 2rem;
+          bottom: 25px;
+          a {
+            text-decoration: none;
+            font-size: 1.6rem;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+// === Video Section ===
+.video-section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: white;
+  .video-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      font-size: 4rem;
+    }
+    .video-text {
+      margin: 4rem 0rem;
+      font-size: 2.4rem;
+      text-align: center;
+    }
+    video {
+      width: 800px;
+    }
+  }
+}
+
+// === Service Section ===
+.service-section {
+  width: 100%;
+  height: 80vh;
+  .service-container {
+    width: 90%;
+    margin: auto;
+    .service-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        font-size: 4rem;
+      }
+      .service-text {
+        width: 80%;
+        margin: 2rem 0rem;
+        font-size: 1.6rem;
+      }
+    }
+    .service-benefits-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .service-package {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .image-container {
+          width: 120px;
+          height: 120px;
+          margin-top: 4rem;
+          background-color: var(--background-color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          img {
+            transition: all 800ms ease-in-out;
+          }
+          img:hover {
+            transform: rotate(360deg);
+          }
+        }
+        .service-name {
+          font-size: 2.4rem;
+          margin: 2rem;
+        }
+        .text {
+          font-size: 1.8rem;
+          text-align: center;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
