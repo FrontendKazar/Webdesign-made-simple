@@ -15,6 +15,7 @@ body {
 
   // === Variablen ===
   --background-color: #3d3f45;
+  --background: #f0f0f0;
   --border-color: #a62c21;
   --underline-color: #1f4e8c;
   --btn-color: #3d3f45;
@@ -22,6 +23,17 @@ body {
 
 section {
   padding: 4em 0rem;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--underline-color);
+  transform: scale(1);
 }
 
 // === Header Styling ===
@@ -79,11 +91,19 @@ section {
   transform: scale(1);
 }
 
+//
+
 // === Banner Image ===
 .banner-image {
   background-image: url(../img/hintergrund.jpg);
   width: 100%;
   height: 400px;
+}
+
+.banner-image-klein {
+  background-image: url(../img/hintergrund-klein.jpg);
+  width: 100%;
+  height: 300px;
 }
 
 // === Newsletter Styling ===
@@ -103,7 +123,7 @@ section {
       color: white;
     }
     form {
-      width: 26%;
+      width: 24%;
       display: flex;
       justify-content: space-between;
       input {
@@ -197,6 +217,7 @@ section {
           position: absolute;
           padding: 0.3rem 2rem;
           bottom: 25px;
+          border: none;
           a {
             text-decoration: none;
             font-size: 1.6rem;
@@ -211,7 +232,6 @@ section {
 // === Video Section ===
 .video-section {
   width: 100%;
-  height: 100vh;
   background-color: var(--background-color);
   color: white;
   .video-container {
@@ -237,7 +257,6 @@ section {
 // === Service Section ===
 .service-section {
   width: 100%;
-  height: 80vh;
   .service-container {
     width: 90%;
     margin: auto;
@@ -287,6 +306,67 @@ section {
           text-align: center;
           font-weight: 300;
         }
+      }
+    }
+  }
+}
+
+// === About-Us Section ===
+.about-us {
+  width: 100%;
+  background-color: var(--background);
+  .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+    .about-us-container {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      .text {
+        width: 800px;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// === Footer Section ===
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: var(--background-color);
+  .container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: white;
+      a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: white;
+        font-weight: bold;
+      }
+    }
+    .icon-container {
+      width: 60px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 2.4rem;
+      a {
+        color: white;
       }
     }
   }

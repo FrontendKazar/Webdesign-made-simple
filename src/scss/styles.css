@@ -14,6 +14,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   --background-color: #3d3f45;
+  --background: #f0f0f0;
   --border-color: #a62c21;
   --underline-color: #1f4e8c;
   --btn-color: #3d3f45;
@@ -21,6 +22,18 @@ body {
 
 section {
   padding: 4em 0rem;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--underline-color);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .main-header {
@@ -101,6 +114,12 @@ section {
   height: 400px;
 }
 
+.banner-image-klein {
+  background-image: url(../img/hintergrund-klein.jpg);
+  width: 100%;
+  height: 300px;
+}
+
 .newsletter-section {
   width: 100%;
   height: 80px;
@@ -128,7 +147,7 @@ section {
 }
 
 .newsletter-section .newsletter-container form {
-  width: 26%;
+  width: 24%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,6 +287,7 @@ section {
   position: absolute;
   padding: 0.3rem 2rem;
   bottom: 25px;
+  border: none;
 }
 
 .home-leistung-section .home-leistung-container .leistung-box-container .leistung-box .btn a {
@@ -278,7 +298,6 @@ section {
 
 .video-section {
   width: 100%;
-  height: 100vh;
   background-color: var(--background-color);
   color: white;
 }
@@ -314,7 +333,6 @@ section {
 
 .service-section {
   width: 100%;
-  height: 80vh;
 }
 
 .service-section .service-container {
@@ -404,6 +422,342 @@ section {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 300;
+}
+
+.about-us {
+  width: 100%;
+  background-color: var(--background);
+}
+
+.about-us .container {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us .container .title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.about-us .container .about-us-container {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-us .container .about-us-container .text {
+  width: 800px;
+  font-size: 2rem;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: var(--background-color);
+}
+
+footer .container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container span {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: white;
+}
+
+footer .container span a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: bold;
+}
+
+footer .container .icon-container {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 2.4rem;
+}
+
+footer .container .icon-container a {
+  color: white;
+}
+
+.light-grey {
+  background: var(--background);
+}
+
+.leistung-section {
+  padding: 0;
+}
+
+.leistung-section .container {
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.leistung-section .container .leistung-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leistung-section .container .leistung-box .leistung-text-headline {
+  width: 90%;
+  margin: 4rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leistung-section .container .leistung-box .leistung-text-headline .title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.leistung-section .container .leistung-box .leistung-text-headline .text {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0rem 4rem;
+}
+
+.leistung-section .container .leistung-box .price-table {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leistung-section .container .leistung-box .price-table .price-box {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background-color);
+  border: 4px solid var(--border-color);
+  color: white;
+}
+
+.leistung-section .container .leistung-box .price-table .price-box .price-title {
+  font-size: 2.4rem;
+  margin: 1rem;
+}
+
+.leistung-section .container .leistung-box .price-table .price-box .price-text {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.4rem;
+}
+
+.leistung-section .container .leistung-box .price-table .price-box .price-content ul li {
+  list-style: none;
+  margin: 2rem 0rem;
+  font-size: 1.8rem;
+}
+
+.leistung-section .container .leistung-box .price-table .price-box .price-btn {
+  position: relative;
+  padding: 0.6rem 2.6rem;
+  cursor: pointer;
+  margin: 2rem;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  -webkit-transition: color 400ms ease-in-out;
+  transition: color 400ms ease-in-out;
+}
+
+.price-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--border-color);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.price-btn:hover,
+.price-btn:focus {
+  color: white;
+}
+
+.price-btn:hover::before,
+.price-btn:focus::before {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.contact-section {
+  width: 100%;
+  padding: 2rem;
+}
+
+.contact-section .container {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-section .container .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-section .container .text-box .title {
+  font-size: 3.2rem;
+}
+
+.contact-section .container .text-box .text {
+  margin: 2rem 0rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contact-section .container form {
+  position: relative;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 30px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 4rem;
+}
+
+.contact-section .container form input {
+  padding: 0.4rem;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  border: 2px solid var(--background-color);
+}
+
+.contact-section .container form input:focus {
+  border: 2px solid var(--border-color);
+  outline: none;
+}
+
+.contact-section .container form .grid-item-3,
+.contact-section .container form .grid-item-4 {
+  grid-column: 1 / -1;
+  border: 2px solid var(--background-color);
+}
+
+.contact-section .container form textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  padding: 0.4rem;
+}
+
+.contact-section .container form textarea:focus {
+  border: 2px solid var(--border-color);
+  outline: none;
+}
+
+.contact-section .container form button {
+  position: relative;
+  width: 160px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+  border: 2px solid var(--background-color);
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.contact-section .container form button:hover,
+.contact-section .container form button:focus {
+  border: 2px solid var(--border-color);
+  color: var(--border-color);
 }
 
 @-webkit-keyframes spinner {
