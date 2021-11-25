@@ -118,7 +118,9 @@
 
   // === Banner Image ===
   .banner-image {
-    background-size: cover;
+    height: 200px;
+  }
+  .banner-image-klein {
     height: 200px;
   }
 
@@ -430,8 +432,27 @@
   }
 }
 
-// Leistung Media 640px
+// Leistung | Newsletter | Banner Media 640px
 @media (max-width: 640px) {
+  // === Mobile Nav Sichtbarkeit ===
+  .main-header {
+    nav {
+      display: none;
+    }
+    #mobile-nav {
+      display: block;
+    }
+  }
+  // === Newsletter Styling ===
+  .newsletter-section {
+    .newsletter-container {
+      .newsletter-text {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  // === Leistung Styling ===
   .leistung-section {
     .container {
       .leistung-box {
@@ -482,6 +503,14 @@
         }
       }
     }
+  }
+
+  // === Banner Image ===
+  .banner-image {
+    height: 120px;
+  }
+  .banner-image-klein {
+    height: 120px;
   }
 }
 

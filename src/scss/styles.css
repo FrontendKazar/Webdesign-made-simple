@@ -84,6 +84,64 @@ section {
   padding: 0.2rem 0rem;
 }
 
+#mobile-nav {
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
+
+#mobile-nav .burger {
+  width: 30px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mobile-nav .burger .bars {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+#mobile-nav ul {
+  width: 140px;
+  height: auto;
+  top: 100%;
+  right: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background-color);
+  -webkit-box-shadow: 0px 8px 8px 0px;
+          box-shadow: 0px 8px 8px 0px;
+}
+
+#mobile-nav ul li {
+  display: none;
+  margin: 1rem 0rem;
+}
+
+#mobile-nav:hover ul li,
+#mobile-nav:focus ul li {
+  display: block;
+}
+
 .underline:before {
   content: "";
   position: absolute;
@@ -107,13 +165,18 @@ section {
 .banner-image {
   background-image: url(../img/hintergrund.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 400px;
 }
 
 .banner-image-klein {
   background-image: url(../img/hintergrund-klein.jpg);
-  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: auto;
   height: 300px;
 }
 
@@ -855,7 +918,9 @@ footer .container .icon-container a {
     font-size: 1.8rem;
   }
   .banner-image {
-    background-size: cover;
+    height: 200px;
+  }
+  .banner-image-klein {
     height: 200px;
   }
   .newsletter-section .newsletter-container .newsletter-text {
@@ -1098,6 +1163,15 @@ footer .container .icon-container a {
 }
 
 @media (max-width: 640px) {
+  .main-header nav {
+    display: none;
+  }
+  .main-header #mobile-nav {
+    display: block;
+  }
+  .newsletter-section .newsletter-container .newsletter-text {
+    font-size: 1.4rem;
+  }
   .leistung-section .container .leistung-box .leistung-text-headline {
     width: 90%;
     margin: 4rem 0rem;
@@ -1145,6 +1219,12 @@ footer .container .icon-container a {
     padding: 0.3rem 1.6rem;
     margin: 2rem;
     font-size: 1.2rem;
+  }
+  .banner-image {
+    height: 120px;
+  }
+  .banner-image-klein {
+    height: 120px;
   }
 }
 
