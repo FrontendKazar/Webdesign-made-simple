@@ -1,0 +1,95 @@
+// === Big NoteBooks ===
+@media (max-width: 1600px) {
+  // === Home Leistung Section ===
+  .home-leistung-section {
+    .home-leistung-container {
+      .leistung-box-container {
+        .leistung-box {
+          position: relative;
+          width: 100%;
+          height: 420px;
+        }
+      }
+    }
+  }
+
+  // === Service Section ===
+  .service-section {
+    .service-container {
+      .service-text-container {
+        .title {
+          font-size: 3.4rem;
+        }
+        .service-text {
+          margin: 1.4rem 0rem;
+        }
+      }
+    }
+  }
+  // === About-Us Section ===
+  .about-us {
+    .container {
+      .about-us-container {
+        width: 80%;
+      }
+    }
+  }
+}
+
+// === MacBook ===
+@media (max-width: 1468px) {
+  // === Header Styling ===
+  .main-header {
+    .header-container {
+      #header-logo {
+        height: 40px;
+      }
+    }
+  }
+  // === Newsletter Styling ===
+  .newsletter-section {
+    .newsletter-container {
+      .newsletter-text {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+// 720P Auflösung
+@media (max-width: 1280px) {
+  // === Newsletter Styling ===
+  .newsletter-section {
+    height: auto;
+    padding: 0;
+    .newsletter-container {
+      padding: 1.6rem 0rem;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .newsletter-text {
+        font-size: 2rem;
+        margin: 1rem 0rem;
+        text-align: center;
+      }
+      form {
+        input {
+          padding: 0.5rem 2rem;
+          font-size: 2rem;
+        }
+        button {
+          font-size: 1.8rem;
+          padding: 0.4rem 2rem;
+        }
+      }
+    }
+  }
+
+  // === About-Us Section ===
+  .about-us {
+    .container {
+      .about-us-container {
+        width: 90%;
+      }
+    }
+  }
+}

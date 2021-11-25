@@ -6,7 +6,6 @@
   .container {
     width: 100%;
     margin: auto;
-    min-height: 100vh;
     .leistung-box {
       display: flex;
       flex-direction: column;
@@ -28,10 +27,11 @@
         }
       }
       .price-table {
-        width: 80%;
+        width: 75%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 4rem;
         .price-box {
           width: 400px;
           display: flex;
@@ -39,6 +39,7 @@
           align-items: center;
           background-color: var(--background-color);
           border: 4px solid var(--border-color);
+          margin: 0rem 2rem;
           color: white;
           .price-title {
             font-size: 2.4rem;

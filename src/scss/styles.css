@@ -61,10 +61,6 @@ section {
   height: 50px;
 }
 
-.main-header .header-container nav {
-  width: 30%;
-}
-
 .main-header .header-container nav ul {
   width: 100%;
   display: -webkit-box;
@@ -147,7 +143,7 @@ section {
 }
 
 .newsletter-section .newsletter-container form {
-  width: 24%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,17 +233,16 @@ section {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-row-gap: 60px;
+  grid-gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: center;
 }
 
 .home-leistung-section .home-leistung-container .leistung-box-container .leistung-box {
   position: relative;
-  width: 500px;
-  height: 400px;
+  width: 40%px;
+  height: 460px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,18 +253,21 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: var(--background-color);
   color: white;
 }
 
 .home-leistung-section .home-leistung-container .leistung-box-container .leistung-box h1 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   margin-top: 3rem;
 }
 
 .home-leistung-section .home-leistung-container .leistung-box-container .leistung-box .inhalt-text {
-  width: 440px;
-  height: 240px;
+  width: 90%;
+  height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,9 +282,9 @@ section {
 }
 
 .home-leistung-section .home-leistung-container .leistung-box-container .leistung-box .btn {
-  position: absolute;
-  padding: 0.3rem 2rem;
-  bottom: 25px;
+  position: relative;
+  padding: 0.8rem 3rem;
+  margin-bottom: 2rem;
   border: none;
 }
 
@@ -374,6 +372,7 @@ section {
 }
 
 .service-section .service-container .service-benefits-container .service-package {
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +523,6 @@ footer .container .icon-container a {
 .leistung-section .container {
   width: 100%;
   margin: auto;
-  min-height: 100vh;
 }
 
 .leistung-section .container .leistung-box {
@@ -567,7 +565,7 @@ footer .container .icon-container a {
 }
 
 .leistung-section .container .leistung-box .price-table {
-  width: 80%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,6 +575,7 @@ footer .container .icon-container a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 4rem;
 }
 
 .leistung-section .container .leistung-box .price-table .price-box {
@@ -593,6 +592,7 @@ footer .container .icon-container a {
           align-items: center;
   background-color: var(--background-color);
   border: 4px solid var(--border-color);
+  margin: 0rem 2rem;
   color: white;
 }
 
@@ -779,6 +779,65 @@ footer .container .icon-container a {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1600px) {
+  .home-leistung-section .home-leistung-container .leistung-box-container .leistung-box {
+    position: relative;
+    width: 100%;
+    height: 420px;
+  }
+  .service-section .service-container .service-text-container .title {
+    font-size: 3.4rem;
+  }
+  .service-section .service-container .service-text-container .service-text {
+    margin: 1.4rem 0rem;
+  }
+  .about-us .container .about-us-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1468px) {
+  .main-header .header-container #header-logo {
+    height: 40px;
+  }
+  .newsletter-section .newsletter-container .newsletter-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .newsletter-section {
+    height: auto;
+    padding: 0;
+  }
+  .newsletter-section .newsletter-container {
+    padding: 1.6rem 0rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .newsletter-section .newsletter-container .newsletter-text {
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    text-align: center;
+  }
+  .newsletter-section .newsletter-container form input {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+  }
+  .newsletter-section .newsletter-container form button {
+    font-size: 1.8rem;
+    padding: 0.4rem 2rem;
+  }
+  .about-us .container .about-us-container {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
