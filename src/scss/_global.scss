@@ -51,7 +51,7 @@ section {
     #header-logo {
       height: 50px;
     }
-    nav {
+    #desktop-nav {
       ul {
         width: 100%;
         display: flex;
@@ -73,45 +73,51 @@ section {
 }
 
 // === Mobile Nav Styling ===
-#mobile-nav {
-  display: none;
+#mobile-nav-burger {
   position: relative;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
+  display: none;
   .burger {
-    width: 30px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .bars {
-      width: 100%;
-      height: 2px;
-      background-color: #fff;
-    }
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
   }
-  ul {
-    width: 140px;
-    height: auto;
-    top: 100%;
-    right: 0;
+  #mobile-nav {
+    display: none;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    top: 20px;
+    right: 0;
     background-color: var(--background-color);
-    box-shadow: 0px 8px 8px 0px;
-    li {
-      display: none;
-      margin: 1rem 0rem;
+    padding: 1rem 3rem;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      li {
+        list-style: none;
+        margin: 1rem 0rem;
+        text-align: center;
+        a {
+          position: relative;
+          text-decoration: none;
+          color: white;
+          font-size: 2rem;
+          padding: 0.2rem 0rem;
+        }
+      }
     }
   }
 }
-#mobile-nav:hover,
-#mobile-nav:focus {
-  ul {
-    li {
-      display: block;
-    }
+
+#mobile-nav-burger:hover,
+#mobile-nav-burger:focus {
+  #mobile-nav {
+    display: block;
   }
 }
 
@@ -132,8 +138,6 @@ section {
 .underline:focus::before {
   transform: scale(1);
 }
-
-//
 
 // === Banner Image ===
 .banner-image {

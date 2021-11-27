@@ -377,6 +377,24 @@
 
 // Eigenständiger Umbruch
 @media (max-width: 700px) {
+  // === Header Styling | Dekstop Nav Styling ===
+  .main-header {
+    .header-container {
+      #header-logo {
+        height: 30px;
+      }
+      #desktop-nav {
+        ul {
+          li {
+            a {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
   // === Service Section ===
   .service-section {
     .service-container {
@@ -436,13 +454,14 @@
 @media (max-width: 640px) {
   // === Mobile Nav Sichtbarkeit ===
   .main-header {
-    nav {
+    #desktop-nav {
       display: none;
     }
-    #mobile-nav {
-      display: block;
+    #mobile-nav-burger {
+      display: flex;
     }
   }
+
   // === Newsletter Styling ===
   .newsletter-section {
     .newsletter-container {

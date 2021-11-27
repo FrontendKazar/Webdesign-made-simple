@@ -61,7 +61,7 @@ section {
   height: 50px;
 }
 
-.main-header .header-container nav ul {
+.main-header .header-container #desktop-nav ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,12 +71,12 @@ section {
           justify-content: space-between;
 }
 
-.main-header .header-container nav ul li {
+.main-header .header-container #desktop-nav ul li {
   list-style: none;
   margin-left: 2rem;
 }
 
-.main-header .header-container nav ul li a {
+.main-header .header-container #desktop-nav ul li a {
   position: relative;
   text-decoration: none;
   color: white;
@@ -84,13 +84,8 @@ section {
   padding: 0.2rem 0rem;
 }
 
-#mobile-nav {
-  display: none;
+#mobile-nav-burger {
   position: relative;
-  cursor: pointer;
-}
-
-#mobile-nav .burger {
   width: 30px;
   height: 20px;
   display: -webkit-box;
@@ -103,20 +98,27 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
+  display: none;
 }
 
-#mobile-nav .burger .bars {
+#mobile-nav-burger .burger {
   width: 100%;
   height: 2px;
   background-color: #fff;
 }
 
-#mobile-nav ul {
-  width: 140px;
-  height: auto;
-  top: 100%;
-  right: 0;
+#mobile-nav-burger #mobile-nav {
+  display: none;
   position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: var(--background-color);
+  padding: 1rem 3rem;
+}
+
+#mobile-nav-burger #mobile-nav ul {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,21 +126,24 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: var(--background-color);
-  -webkit-box-shadow: 0px 8px 8px 0px;
-          box-shadow: 0px 8px 8px 0px;
 }
 
-#mobile-nav ul li {
-  display: none;
+#mobile-nav-burger #mobile-nav ul li {
+  list-style: none;
   margin: 1rem 0rem;
+  text-align: center;
 }
 
-#mobile-nav:hover ul li,
-#mobile-nav:focus ul li {
+#mobile-nav-burger #mobile-nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.2rem 0rem;
+}
+
+#mobile-nav-burger:hover #mobile-nav,
+#mobile-nav-burger:focus #mobile-nav {
   display: block;
 }
 
@@ -829,6 +834,37 @@ footer .container .icon-container a {
   color: var(--border-color);
 }
 
+.impressum-section {
+  padding-top: 1rem;
+}
+
+.impressum-section .container {
+  width: 95%;
+  margin: auto;
+}
+
+.impressum-section h1 {
+  font-size: 2.8rem;
+  margin: 2rem 0rem;
+}
+
+.impressum-section h2 {
+  font-size: 2.4rem;
+  margin: 1rem 0rem;
+}
+
+.impressum-section p {
+  margin: 2rem 0rem;
+  font-size: 1.6rem;
+}
+
+.impressum-section ul li {
+  list-style: none;
+  margin: 0.5rem 0rem 0.5rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
 @-webkit-keyframes spinner {
   from {
     -webkit-transform: rotate(0deg);
@@ -1119,6 +1155,12 @@ footer .container .icon-container a {
 }
 
 @media (max-width: 700px) {
+  .main-header .header-container #header-logo {
+    height: 30px;
+  }
+  .main-header .header-container #desktop-nav ul li a {
+    font-size: 1.8rem;
+  }
   .service-section .service-container .service-text-container .title {
     font-size: 2.6rem;
   }
@@ -1163,11 +1205,13 @@ footer .container .icon-container a {
 }
 
 @media (max-width: 640px) {
-  .main-header nav {
+  .main-header #desktop-nav {
     display: none;
   }
-  .main-header #mobile-nav {
-    display: block;
+  .main-header #mobile-nav-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .newsletter-section .newsletter-container .newsletter-text {
     font-size: 1.4rem;

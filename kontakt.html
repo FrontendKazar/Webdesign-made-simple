@@ -31,7 +31,7 @@
           alt="Webdesign made simple Logo"
           id="header-logo"
         />
-        <nav>
+        <nav id="desktop-nav">
           <ul>
             <li><a class="underline" href="./index.html">Startseite</a></li>
             <li>
@@ -44,21 +44,27 @@
           </ul>
         </nav>
         <!-- === Mobile Navigation Start === -->
-        <nav id="mobile-nav">
-          <div class="burger">
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
-          </div>
-          <ul>
-            <li><a class="underline" href="./index.html">Startseite</a></li>
-            <li><a class="underline" href="./leistung.html">Leistungen</a></li>
-            <li>
-              <a class="underline active" href="./kontakt.html">Kontakt</a>
-            </li>
-            <li><a class="underline" href="./impressum.html">Impressum</a></li>
-          </ul>
-        </nav>
+        <div id="mobile-nav-burger">
+          <div class="burger"></div>
+          <div class="burger"></div>
+          <div class="burger"></div>
+          <nav id="mobile-nav">
+            <ul>
+              <li>
+                <a class="underline" href="./index.html">Startseite</a>
+              </li>
+              <li>
+                <a class="underline" href="./leistung.html">Leistungen</a>
+              </li>
+              <li>
+                <a class="active underline" href="./kontakt.html">Kontakt</a>
+              </li>
+              <li>
+                <a class="underline" href="./impressum.html">Impressum</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <!-- === Mobile Navigation End === -->
       </div>
     </header>
