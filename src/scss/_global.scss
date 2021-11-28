@@ -128,7 +128,7 @@ section {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 3px;
+  height: 2px;
   background-color: var(--underline-color);
   transform: scale(0);
   transition: all 200ms ease-in-out;
@@ -136,7 +136,7 @@ section {
 
 .underline:hover::before,
 .underline:focus::before {
-  transform: scale(1);
+  transform: scale(1.01);
 }
 
 // === Banner Image ===
